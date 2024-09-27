@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>THE QUIZ SHOW - Think Fast Score High</title>
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+</head>
+<body>
+    <div id="particles-js">
+    <div class="start-screen" id="particles-js">
+        <h1><span class="h1"></span></h1>
+        <h2><span class="h2"></span></h2>
+        <br><br>
+        <button id="start-button">Start</button>
+    </div>
+    
+    <div id="display-container">
+        <div class="header" id="particles-js">
+            <div class="number-of-count">
+                <span class="number-of-question">1 of 3 questions</span>
+            </div>
+            <div class="timer-div">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png" width="20px" />
+                <span class="time-left">10s</span>
+            </div>
+        </div>
+        <div id="container"></div>
+        <button id="next-button">Next</button>
+    </div>
+    <div id="particles-js"></div>
+    <div class="score-container hide" id="particles-js">
+        <div id="user-score"><Span class="h3"></Span></div>
+        <button id="restart">Restart</button>
+    </div>
+</div>
+    <!-- Include particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <script>
+        
+        var typed = new Typed(".h1", {
+            strings: ["WELCOME TO THE QUIZ SHOW!"],
+            typeSpeed: 150,
+            backSpeed: 50,
+            loop: true
+        });
+
+        var typed2 = new Typed(".h2", {
+            strings: ["Think Fast Score High"],
+            typeSpeed: 150,
+            backSpeed: 50,
+            loop: true
+        });
+        
+        // Initialize particles.js
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('Particles.js loaded!');
+        });
+    </script>
+
+</body>
+
+</html>

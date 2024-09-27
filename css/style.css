@@ -1,0 +1,229 @@
+:root {
+    /* Background Color */
+    --primary-color: #4458dc;
+    --secondary-color: #EB5B00;
+    --bg-white: #fff;
+    --bg-light: #faf8ff;
+    --bg-black: #000;
+    --bg-gray: #eee;
+    --gradient: linear-gradient(to right, #EB5B00 0%, #E4003A 100%), radial-gradient(circle at top left, #EB5B00, #8E4003);
+    --gradient-2: linear-gradient(to left, #291001 25%, #1d0309 100%), radial-gradient(circle at top left, #EB5B00, #8E4003);
+
+    /* Text Color */
+    --primary-text: #4458dc;
+    --secondary-text: #854fee;
+    --text-white: #fff;
+    --text-black: #000;
+    --text-gray: #777;
+
+    /* Font Family */
+    --primary-font: 'Rubik', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #170528;
+}
+
+h1, h2 {
+    color: rgba(157, 145, 227, 0.644);
+    font-size: 5em;
+}
+
+.start-screen,
+.score-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#start-button,
+#restart {
+    background-color: #a275cb;
+    color: #fff;
+    font-size: 1.3em;
+    padding: 0.5em 1.8em;
+    border-radius: 0.2em;
+    box-shadow: 0px 20px 30px 5px rgba(157, 145, 227, 0.644);
+}
+
+#restart {
+    margin-top: 0.9em;
+}
+
+#display-container {
+    background-color: #252323e2;
+    padding: 3.1em 1.8em;
+    width: 80%;
+    max-width: 37.5em;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 0.6em;
+}
+
+.header {
+    margin-bottom: 1.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.6em;
+    border-bottom: 0.1em solid #c0bfd2;
+}
+
+.timer-div {
+    background-color: #e1f5fe;
+    width: 7.5em;
+    border-radius: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7em 1.8em;
+    color: #000;
+}
+
+.question {
+    margin-bottom: 1.25em;
+    font-weight: 600;
+    color: white;
+}
+
+.option-div {
+    font-size: 0.9em;
+    width: 100%;
+    padding: 1em;
+    margin: 0.3em 0;
+    text-align: left;
+    outline: none;
+    background: transparent;
+    border: 1px solid #c0bfd2;
+    border-radius: 0.3em;
+    color: white;
+}
+
+.option-div:disabled {
+    color: #fff;
+    cursor: not-allowed;
+}
+
+#next-button {
+    font-size: 1em;
+    margin-top: 1.5em;
+    background-color: #1c074e;
+    color: #ffffff;
+    padding: 0.7em 1.8em;
+    border-radius: 0.3em;
+    float: right;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hide {
+    display: none;
+}
+
+.incorrect {
+    background-color: #9c0707;
+    color: #9c0707;
+    border-color: #9c0707;
+}
+
+.correct {
+    background-color: #0cbb20;
+    color: #0cbb20;
+    border-color: #0cbb20;
+}
+
+#user-score {
+    font-size: 5em;
+    color: rgba(157, 145, 227, 0.644);
+}
+
+.number-of-count {
+    color: white;
+}
+
+.number-of-question {
+    color: white;
+}
+
+.container {
+    color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    h1, h2 {
+        font-size: 3.5em;
+    }
+
+    #display-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1, h2 {
+        font-size: 2.5em;
+    }
+
+    #display-container {
+        padding: 2em 1.2em;
+    }
+
+    .timer-div {
+        width: 6em;
+        padding: 0.5em 1.2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    #display-container {
+        padding: 1.5em 1em;
+    }
+
+    #start-button,
+    #restart {
+        font-size: 1em;
+        padding: 0.4em 1.2em;
+    }
+
+    #next-button {
+        font-size: 0.9em;
+        padding: 0.5em 1.5em;
+    }
+
+    .option-div {
+        font-size: 0.8em;
+        padding: 0.8em;
+    }
+
+    .timer-div {
+        width: 5em;
+        padding: 0.4em 1em;
+    }
+}
